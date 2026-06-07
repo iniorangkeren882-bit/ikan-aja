@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pencarian Cupang Pink</title>
+
+<style>
+body{
+    font-family: Arial,Sans-Serif;
+    text-align: center;
+    background: #fff7fb;
+    padding: 30px;
+}
+h1{
+    color: #ff5ca8;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#ikan{
+    font-size: 80px;
+    margin: 20px;
+}
+#hasil{
+    font-size: 20px;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+  
+<h1> 🐟 Pencarian Cupang Pink 🐟 </h1>
+  
+<p>Mama, ayo bantu Arlo mencari cupang pink.</p>
+  
+<div id="ikan">🐟</div>
+
+<button onclick="cariCupang ()">Cari Cupang</button>
+<div id="hasil"></div>
+
+<script>
+function cariCupang(){
+  
+const angka = Math.random();
+
+if (angka < 0.2){
+  
+document.getElementById("ikan").innerHTML = "🤘🐟";
+document.getElementById("hasil").innerHTML = "AYO CARI CUPANG PINK!";
+
+alert("Selamat🤘😎\n\nMama berhasil menemukan cupang pink!\n\nMisi cupang pink dedek untuk mama telah selesai. Lekas sembuh, Mama.");
+
+}else{
+  
+const pesan = [
+"🐟 Cupang biru ditemukan",
+"🐟 Cupang merah ditemukan",
+"🐟 Cupang ungu ditemukan",
+"🐟 Belum ketemu cupang pink",
+"🐟 Arlo masih mencari..."
+];
+
+document.getElementById("ikan").innerHTML = "🐟";
+
+document.getElementById("hasil").innerHTML = pesan[Math.floor(Math.random()*pesan.length)];
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
